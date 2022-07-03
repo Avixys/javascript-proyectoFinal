@@ -1,0 +1,98 @@
+const productsData = [
+  {
+    id: 1,
+    name: "RTX 3060Ti",
+    price: "$3406.88",
+    img: "../multimedia/PC/14-126-470-V03.webp",
+  },
+  {
+    id: 2,
+    name: "Corsair Vengence PRO",
+    price: "$2966.42",
+    img: "../multimedia/PC/692564-MLA40194179683_122019-F.jpg",
+  },
+  {
+    id: 3,
+    name: "Patriot Viper",
+    price: "$5691.95",
+    img: "../multimedia/PC/1617649633_viper_steel_rgb_b_back.jpg",
+  },
+  {
+    id: 4,
+    name: "XPG Gammix",
+    price: "$4172.46",
+    img: "../multimedia/PC/AGAMMIXS11P-512GT-C.jpeg",
+  },
+  {
+    id: 5,
+    name: "Ryzen 9",
+    price: "$7261.03",
+    img: "../multimedia/PC/concepto-6252949.jpg",
+  },
+  {
+    id: 6,
+    name: "ASUS ROG Helios",
+    price: "$2042.06",
+    img: "../multimedia/PC/D_NQ_NP_799844-MLA50376713804_062022-W.jpg",
+  },
+  {
+    id: 7,
+    name: "Samsung EVO PRO",
+    price: "$6358.07",
+    img: "../multimedia/PC/disco-solido-ssd-nvme-m2-samsung-980-evo-pro-250gb-pcie-40-2273-3482.jpg",
+  },
+  {
+    id: 8,
+    name: "ROG STRIX 650watts",
+    price: "$3316.10",
+    img: "../multimedia/PC/fuente asus rog.jpg",
+  },
+  {
+    id: 9,
+    name: "Lian Li Dinamiic XL",
+    price: "$3778.32",
+    img: "../multimedia/PC/GABINETE-LIAN-LI-DYNAMIC-XL-ROG-CERTIFY-BLANCO-ARGB1620611787222.jpg",
+  },
+  {
+    id: 10,
+    name: "RTX 360",
+    price: "$2489.97",
+    img: "../multimedia/PC/gpu_rog.jpg",
+  },
+  {
+    id: 11,
+    name: "ROG Maximus Z690",
+    price: "$8750.67",
+    img: "../multimedia/PC/mobo_rog.jpg",
+  },
+  {
+    id: 12,
+    name: "MSI PRO Z690",
+    price: "$3353.15",
+    img: "../multimedia/PC/MOT1817.jpg",
+  },
+  {
+    id: 13,
+    name: "i5 12600k",
+    price: "$5032.16",
+    img: "../multimedia/PC/procesador-intel-core-i5-12600k-370ghz.jpg",
+  },
+  {
+    id: 14,
+    name: "i7 12700k",
+    price: "$8780.31",
+    img: "../multimedia/PC/procesador-intel-core-i7-12700k-360ghz25mb-lga1700-pnbx8071512700k.jpg",
+  },
+  {
+    id: 15,
+    name: "i9 12900k",
+    price: "$7017.08",
+    img: "../multimedia/PC/Procesador-IntelCorei9-12900K--5.2Ghz-AlderLake-1700-SinCooler_41360_1.jpeg",
+  },
+  {
+    id: 16,
+    name: "Ryzen 5",
+    price: "$9238.24",
+    img: "../multimedia/PC/Ryzen-5-5600X_Foto0g.jpg",
+  },
+];

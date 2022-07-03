@@ -1,0 +1,17 @@
+.news {
+    background-color: rgb(212, 212, 212);
+    display: flex;
+    justify-content: center;
+    a {
+        display: flex;
+        justify-content: center;
+    }
+    div {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.newsImg {
+    width: 80%;
+}

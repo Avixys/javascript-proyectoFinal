@@ -1,0 +1,39 @@
+.footer{
+    background-color: black;
+    font-size: 1.5rem;
+    color: white;
+    display: flex;
+    justify-content: center;
+    div {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        text-decoration: none;
+        p {
+            margin-bottom: 5px;
+        }
+        a {
+            text-decoration: none;
+            color: white;
+            &:hover {
+                color: red;
+            }
+        }
+        div {
+            display: flex;
+            flex-direction: row ;
+            justify-content: center;
+            a {
+                margin: 0 10px;
+            }
+        }
+    }
+    @media screen and (max-width: 768px) {
+        font-size: 1.25rem;
+    }
+}
+
+.footerImg {
+    width: 100px;
+    margin: 10px 0;
+}
