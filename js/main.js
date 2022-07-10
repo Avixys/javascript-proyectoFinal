@@ -35,6 +35,19 @@ const addProduct = (id) => {
     }
     console.log(cart);
     calculate();
+
+    Toastify({
+        text: "Producto agregado al carrito!\n",
+        duration: 2000,
+        gravity: 'bottom',
+        position: 'right',
+        className: 'notification',
+        style: {
+            background: "red",
+            color: "black",
+        },
+    }).showToast();
+
     localStorage.setItem("productsData", JSON.stringify(cart));
 };
 
