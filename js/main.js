@@ -33,11 +33,11 @@ const addProduct = (id) => {
     } else {
         search.item += 1;
     }
-    console.log(cart);
+    
     calculate();
-
+    let productToast = productsData.find ((p) => p.id===id);
     Toastify({
-        text: "Producto agregado al carrito!\n",
+        text: `Producto agregado al carrito\n${productToast.name}\n${productToast.price}`,
         duration: 2000,
         gravity: 'bottom',
         position: 'right',
