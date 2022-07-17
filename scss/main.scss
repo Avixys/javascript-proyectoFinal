@@ -1,9 +1,7 @@
 @import "fuentes";
 @import "header";
-@import "news";
-@import "incoming";
 @import "footer";
-@import "consolaspc";
+@import "ventaspc";
 
 $estiloForm: (
     color: rgba(0, 0, 0, 0.8),
@@ -12,8 +10,8 @@ $estiloForm: (
     borderRadius: 3px
 );
 
-.carousel-inner {
-    background-color: rgb(212, 212, 212);
+.carrusel {
+    background-color:rgb(212, 212, 212);
 }
 
 .d-block {
@@ -97,23 +95,4 @@ $estiloForm: (
         width: 280px;
         height: 157px;
     }
-}
-
-.cart {
-    position: relative;
-}
-
-.cartAmount {
-    position: absolute;
-    right: -5px;
-    top: -5px;
-    font-size: 12px;
-    background-color: red;
-    color: white;
-    border-radius: 3px;
-}
-
-.notification {
-    font-size: 16px;
-    font-weight: bold;
 }

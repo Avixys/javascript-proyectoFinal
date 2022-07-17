@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Avixys/todoGamer.git"
+    "url": "git+https://github.com/Avixys/javascript-proyectoFinal.git"
   },
-  "author": "",
+  "author": "Nicolas Barbano",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Avixys/todoGamer/issues"
+    "url": "https://github.com/Avixys/javascript-proyectoFinal/issues"
   },
-  "homepage": "https://github.com/Avixys/todoGamer#readme",
+  "homepage": "https://github.com/Avixys/javascript-proyectoFinal#readme",
   "description": "",
   "devDependencies": {
     "node-sass": "^7.0.1",

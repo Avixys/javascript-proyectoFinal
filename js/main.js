@@ -1,12 +1,24 @@
 const products = document.getElementById ("products");
-
 let cart = JSON.parse(localStorage.getItem("productsData")) || [];
 
+let productsData = [];
+
+const getData = async () => {
+    try {
+    const res = await fetch("../database/db.json");
+    productsData = await res.json();
+    generatePorudcts (productsData);
+    } catch (error) {
+        console.log(error);
+    }
+}
+getData();
+
 // Función para generar grilla de productos
-let generatePorudcts = () => {
-    return (products.innerHTML = productsData.map((p)=>{
+let generatePorudcts = (data) => {
+    return (products.innerHTML = data.map((p)=>{
         const {id, name, price, img} = p;
-        return `<div class="item">
+        return `<div id="product-id-${id}" class="item">
         <img src="${img}" alt="img not found">
         <div class="details">
             <h3>${name}</h3>
@@ -19,8 +31,13 @@ let generatePorudcts = () => {
     })
     .join(""));
 };
+// Función para calcular total de productos del carrito
+const calculate = () => {
+    let cartIcon = document.getElementById("cartAmount");
+    cartIcon.innerHTML = cart.map((p)=>p.item).reduce((x,y)=>x + y, 0);
+};
 
-generatePorudcts ();
+calculate();
 
 // Función agregar productos al carrito
 const addProduct = (id) => {
@@ -54,20 +71,13 @@ const addProduct = (id) => {
 // Función para remover Productos del Carrito: Falta procesar la página carrito para aplicarla
 const removeProduct = (id) => {
     let search = cart.find((p) => p.id === id);
-    if (search.item === 0) return;
+    if(search === undefined) return;
+    else if (search.item === 0) return;
     else {
         search.item -= 1;
     }
-    console.log(cart); 
+    console.log(cart);
+    cart = cart.filter((p) => p.item !==0);
     calculate();
     localStorage.setItem("productsData", JSON.stringify(cart));
 };
-
-
-// Función para calcular total de productos del carrito
-const calculate = () => {
-    let cartIcon = document.getElementById("cartAmount");
-    cartIcon.innerHTML = cart.map((p)=>p.item).reduce((x,y)=>x + y, 0);
-};
-
-calculate();
