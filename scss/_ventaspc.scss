@@ -112,12 +112,3 @@
         grid-template-columns: repeat(1,223px);
     }
 }
-
-.buttons {
-    width: 100px;
-    border-radius: 5px;
-    font-size: 1.5rem;
-    &:hover {
-        background-color: rgb(255, 0, 0);
-    }
-}

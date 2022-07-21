@@ -7,27 +7,30 @@ const getData = async () => {
     try {
     const res = await fetch("../database/db.json");
     productsData = await res.json();
-    generatePorudcts (productsData);
+    generateProducts (productsData);
     } catch (error) {
         console.log(error);
-    }
-}
+    };
+};
+
 getData();
 
 // Función para generar grilla de productos
-let generatePorudcts = (data) => {
+let generateProducts = (data) => {
     return (products.innerHTML = data.map((p)=>{
         const {id, name, price, img} = p;
-        return `<div id="product-id-${id}" class="item">
+        return `
+        <div id="product-id-${id}" class="item">
         <img src="${img}" alt="img not found">
         <div class="details">
             <h3>${name}</h3>
             <div class="price">
-                <h2>${price}</h2>
+                <h2>$ ${price}</h2>
                 <button onClick="addProduct(${id})" class="buttons">Agregar</button>
             </div>
         </div>
-    </div>`;
+    </div>
+    `;
     })
     .join(""));
 };
@@ -54,30 +57,16 @@ const addProduct = (id) => {
     calculate();
     let productToast = productsData.find ((p) => p.id===id);
     Toastify({
-        text: `Producto agregado al carrito\n${productToast.name}\n${productToast.price}`,
+        text: `Producto agregado al carrito\n${productToast.name}\n$ ${productToast.price}`,
         duration: 2000,
         gravity: 'bottom',
         position: 'right',
         className: 'notification',
         style: {
-            background: "red",
+            background: "lightgreen",
             color: "black",
         },
     }).showToast();
 
-    localStorage.setItem("productsData", JSON.stringify(cart));
-};
-
-// Función para remover Productos del Carrito: Falta procesar la página carrito para aplicarla
-const removeProduct = (id) => {
-    let search = cart.find((p) => p.id === id);
-    if(search === undefined) return;
-    else if (search.item === 0) return;
-    else {
-        search.item -= 1;
-    }
-    console.log(cart);
-    cart = cart.filter((p) => p.item !==0);
-    calculate();
     localStorage.setItem("productsData", JSON.stringify(cart));
 };

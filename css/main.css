@@ -166,12 +166,54 @@ html {
     .products {
       grid-template-columns: repeat(1, 223px); } }
 
-.buttons {
-  width: 100px;
+.label {
+  text-align: center;
+  margin-bottom: 20px; }
+
+.fa-square-xmark {
+  color: red;
+  cursor: pointer; }
+
+.shopping-cart {
+  display: grid;
+  grid-template-columns: repeat(1, 320px);
+  justify-content: center;
+  gap: 15px; }
+
+.cart-item {
+  border: 2px solid black;
   border-radius: 5px;
-  font-size: 1.5rem; }
-  .buttons:hover {
-    background-color: red; }
+  display: flex;
+  height: 150px; }
+
+.title-price-cart {
+  width: 195px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px; }
+
+.title-price {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 5px; }
+
+.cart-item-price {
+  background-color: black;
+  color: white;
+  border-radius: 4px;
+  padding: 3px 6px; }
+
+.quantity {
+  display: flex;
+  gap: 15px; }
+
+.fa-square-minus {
+  cursor: pointer; }
+
+.fa-square-plus {
+  cursor: pointer; }
 
 .carrusel {
   background-color: #d4d4d4; }
@@ -179,64 +221,12 @@ html {
 .d-block {
   margin: 0  auto !important; }
 
-/*form contacto*/
-.formulario {
-  margin-bottom: 50px;
-  font-size: 2.5rem;
-  text-align: center; }
-
-.contactoForm {
-  margin: 0 auto;
-  width: 400px;
-  background-color: rgba(0, 0, 0, 0.8);
-  border-radius: 3px;
-  font-size: 1.5rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: white;
-  /*animacion*/ }
-  .contactoForm div {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 5px 0px; }
-  .contactoForm input:focus {
-    transform: scale(1.1); }
-  @media screen and (max-width: 768px) {
-    .contactoForm {
-      width: 300px;
-      align-items: center; } }
-
-.field {
-  outline: none;
-  border: solid 1px;
-  border-radius: 3px;
-  width: 370px;
-  transition: all 1s; }
-  @media screen and (max-width: 768px) {
-    .field {
-      width: 270px; } }
-
-.send {
-  flex-direction: row !important; }
-
-.botonEnviar, .botonCancelar {
-  padding: 0px 10px;
-  margin: 0 10px 10px 10px;
+.buttons {
   width: 100px;
-  border-radius: 5px; }
-  .botonEnviar:hover, .botonCancelar:hover {
-    background-color: teal; }
-
-.botonCancelar:hover {
-  background-color: #dc5046; }
-
-/*fin form contacto*/
-@media screen and (max-width: 768px) {
-  .ubicacion {
-    width: 300px;
-    height: 225px; }
-  .video {
-    width: 280px;
-    height: 157px; } }
+  color: black;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 10px; }
+  .buttons:hover {
+    background-color: red; }
