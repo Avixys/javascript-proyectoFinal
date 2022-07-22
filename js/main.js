@@ -83,7 +83,6 @@ const findProducts = () => {
             );
         }
     });
-    generateProducts();
 };
 
 /* Llamado de funciones */

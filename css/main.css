@@ -188,7 +188,8 @@ html {
   display: grid;
   grid-template-columns: repeat(1, 320px);
   justify-content: center;
-  gap: 15px; }
+  gap: 15px;
+  margin-bottom: 5px; }
 
 .cart-item {
   border: 2px solid black;
@@ -217,7 +218,8 @@ html {
 
 .quantity {
   display: flex;
-  gap: 15px; }
+  gap: 15px;
+  margin-bottom: 10px; }
 
 .fa-square-minus {
   cursor: pointer; }

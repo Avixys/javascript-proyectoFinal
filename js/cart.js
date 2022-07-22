@@ -48,7 +48,7 @@ let generateCart = () => {
             const {img, name, price} = search;
             return `
             <div class="cart-item">
-                <img width="100" src=${img} alt""><img/>
+                <img width="100" src="${img}" alt""><img/>
                 <div class="details">
                     <div class="title-price-cart">
                         <h4 class="title-price">
