@@ -132,6 +132,15 @@ html {
         .productsFilter ul li {
           padding: 0px 5px; } }
 
+.findProducts {
+  font-size: 16px;
+  font-weight: bold; }
+
+.filter-item {
+  visibility: hidden;
+  opacity: 0;
+  display: none; }
+
 .products {
   margin: 20px 0px;
   display: grid;
@@ -168,7 +177,8 @@ html {
 
 .label {
   text-align: center;
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  color: black; }
 
 .fa-square-xmark {
   color: red;
@@ -215,6 +225,20 @@ html {
 .fa-square-plus {
   cursor: pointer; }
 
+.checkOut, .removeAll {
+  width: 100px;
+  color: black;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 10px; }
+  .checkOut:hover, .removeAll:hover {
+    background-color: red;
+    color: white; }
+
+.checkOut:hover {
+  background-color: green; }
+
 .carrusel {
   background-color: #d4d4d4; }
 
@@ -229,4 +253,5 @@ html {
   font-weight: bold;
   margin-top: 10px; }
   .buttons:hover {
-    background-color: red; }
+    background-color: red;
+    color: white; }

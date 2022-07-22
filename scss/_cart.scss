@@ -1,6 +1,7 @@
 .label {
     text-align: center;
     margin-bottom: 20px;
+    color: black;
 }
 
 .fa-square-xmark {
@@ -54,4 +55,23 @@
 
 .fa-square-plus {
     cursor: pointer;
+}
+
+.checkOut, .removeAll {
+    width: 100px;
+    color: black;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 10px;
+    &:hover {
+        background-color: red;
+        color: white;
+    }
+}
+
+.checkOut {
+    &:hover{
+        background-color: green;
+    }
 }

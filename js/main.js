@@ -7,17 +7,17 @@ const getData = async () => {
     try {
     const res = await fetch("../database/db.json");
     productsData = await res.json();
-    generateProducts (productsData);
+    generateProducts ();
     } catch (error) {
         console.log(error);
     };
 };
 
-getData();
+
 
 // Función para generar grilla de productos
-let generateProducts = (data) => {
-    return (products.innerHTML = data.map((p)=>{
+let generateProducts = () => {
+    return (products.innerHTML = productsData.map((p)=>{
         const {id, name, price, img} = p;
         return `
         <div id="product-id-${id}" class="item">
@@ -34,26 +34,24 @@ let generateProducts = (data) => {
     })
     .join(""));
 };
+
+
 // Función para calcular total de productos del carrito
 const calculate = () => {
     let cartIcon = document.getElementById("cartAmount");
     cartIcon.innerHTML = cart.map((p)=>p.item).reduce((x,y)=>x + y, 0);
 };
 
-calculate();
-
 // Función agregar productos al carrito
 const addProduct = (id) => {
     let search = cart.find((p) => p.id === id);
-    if(search === undefined){
-        cart.push({
-            id: id,
-            item: 1,
-        });
-    } else {
-        search.item += 1;
-    }
-    
+    search === undefined
+    ? cart.push({
+        id: id,
+        item: 1,
+    })
+    : search.item +=1;
+        
     calculate();
     let productToast = productsData.find ((p) => p.id===id);
     Toastify({
@@ -70,3 +68,25 @@ const addProduct = (id) => {
 
     localStorage.setItem("productsData", JSON.stringify(cart));
 };
+
+/* Búsqueda de prodcutos */
+
+const findProducts = () => {
+    const input = document.querySelector("#findProducts");
+    input.addEventListener("keyup", (e) => {
+        let lowerCaseInput = e.target.value.toLowerCase();
+        if(e.target.matches("#findProducts")) {
+            document.querySelectorAll(".item").forEach(
+                (el) => el.textContent.toLowerCase().includes(lowerCaseInput)
+                ? el.classList.remove("filter-item")
+                : el.classList.add("filter-item")
+            );
+        }
+    });
+    generateProducts();
+};
+
+/* Llamado de funciones */
+getData();
+calculate();
+findProducts();
